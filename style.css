@@ -1,3 +1,23 @@
-* {
-	color-scheme: dark;
+ul {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+}
+
+li {
+	display: flex;
+	padding: 2px;
+	margin: 2px;
+	width: 200px;
+	height: fit-content;
+	/* background: gray; */
+}
+
+.footer {
+	margin-top: 50%;
+	height: 100px;
+}
+
+span {
+	display: flex;
 }
