@@ -5,7 +5,7 @@
         init: function(){
             this.cacheDom();
             this.pushToArr();
-            this.alwaysOn();
+            this.delPerson();
         },
         cacheDom: function(){
             this.el = document.body.querySelector("#peopleModule");
@@ -37,12 +37,11 @@
             el.appendChild(delbtn);
             return delbtn
         },
-        alwaysOn: function(){
+        delPerson: function(){
             parent = this.ul;
             parent.addEventListener("click", function(e){
                 if(e.target.classList[1] === "del"){
                     const itemToDel = e.target.classList[0];
-                    console.log(itemToDel);
                     parent.removeChild(e.path[1]);
                     delete people.people[people.people.indexOf(itemToDel)];
                     people.people = people.people.filter(item => item);
