@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Spaghetti</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div id="peopleModule">
+			<h1>People</h1>
+			<input class="personinfo" placeholder="name" type="text" />
+			<button id="addPerson">Add Person</button>
+			<ul id="people">
+				<script id="people-template" type="text/template">
+					<li>
+					    <span>.</span>
+					    <i class="del">X</i>
+					</li>
+				</script>
+			</ul>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
