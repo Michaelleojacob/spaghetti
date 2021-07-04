@@ -14,25 +14,21 @@
             this.btn = this.el.querySelector("#addPerson");
             this.pinfo = this.el.querySelector(".personinfo");
         },
+        clickOrKeyPressLogic: function(){
+            const parent = people;
+            const personinfo = people.pinfo;
+            if(personinfo.value === "")return;
+            if(personinfo.value !== "")people.people.push(personinfo.value);
+            personinfo.value = '';
+            parent.renderToPage(people.people);
+        },
         clickToPush: function(){
-            const parent = this;
-            const personinfo = this.pinfo;
-            document.addEventListener("click", function(e){
-                if(personinfo.value === "")return;
-                if(personinfo.value !== "")people.people.push(personinfo.value);
-                personinfo.value = '';
-                parent.renderToPage(people.people);
-            })
+            document.addEventListener("click", people.clickOrKeyPressLogic)
         },
         enterToPush: function(){
-            const parent = this;
-            const personinfo = this.pinfo;
-            document.addEventListener("keydown", function(e){
+            document.addEventListener("keypress", function(e){
                 if(e.key === "Enter"){
-                    if(personinfo.value === "")return;
-                    if(personinfo.value !== "")people.people.push(personinfo.value);
-                    personinfo.value = '';
-                    parent.renderToPage(people.people);
+                    people.clickOrKeyPressLogic();
                 }
             })
         },

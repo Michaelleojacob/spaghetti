@@ -4,8 +4,9 @@
         people: [],
         init: function(){
             this.cacheDom();
-            this.pushToArr();
+            this.clickToPush();
             this.delPerson();
+            this.enterToPush();
         },
         cacheDom: function(){
             this.el = document.body.querySelector("#peopleModule");
@@ -13,16 +14,25 @@
             this.btn = this.el.querySelector("#addPerson");
             this.pinfo = this.el.querySelector(".personinfo");
         },
-        pushToArr: function(){
-            const personinfo = this.pinfo;
-            this.btn.addEventListener("click", function(e){
-                if(personinfo.value === "")return;
-                if(personinfo.value !== "")people.people.push(personinfo.value);
-                personinfo.value = '';
-                people.renderPersonToPage(people.people);
-            });
+        clickOrKeyPressLogic: function(){
+            const parent = people;
+            const personinfo = people.pinfo;
+            if(personinfo.value === "")return;
+            if(personinfo.value !== "")people.people.push(personinfo.value);
+            personinfo.value = '';
+            parent.renderToPage(people.people);
         },
-        renderPersonToPage: function(arr){
+        clickToPush: function(){
+            document.addEventListener("click", people.clickOrKeyPressLogic)
+        },
+        enterToPush: function(){
+            document.addEventListener("keypress", function(e){
+                if(e.key === "Enter"){
+                    people.clickOrKeyPressLogic();
+                }
+            })
+        },
+        renderToPage: function(arr){
             const personli = document.createElement("li");
             const info = arr[arr.length-1];
             personli.textContent = info;
