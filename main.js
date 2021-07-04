@@ -41,9 +41,11 @@
             parent = this.ul;
             parent.addEventListener("click", function(e){
                 if(e.target.classList[1] === "del"){
+                    const itemToDel = e.target.classList[0];
+                    console.log(itemToDel);
                     parent.removeChild(e.path[1]);
-                    // delete people.people[people.people.indexOf(itemToDel)];
-                    // people.people = people.people.filter(item => item);
+                    delete people.people[people.people.indexOf(itemToDel)];
+                    people.people = people.people.filter(item => item);
                 }
             })
         }
