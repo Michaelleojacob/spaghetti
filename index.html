@@ -5,18 +5,71 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Spaghetti</title>
+		<link rel="stylesheet" href="./header.css" />
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
+		<!-- -FLAIR- begins -->
+		<div class="mytooltip" data-tooltip="click to copy" id="email">
+			<input
+				type="text"
+				value="michaelleojacob@gmail.com"
+				id="copyemail"
+				readonly="readonly"
+			/>
+		</div>
+		<header class="header">
+			<div class="foo">
+				<a href="https://github.com/Michaelleojacob" target="_blank"
+					><i class="fab fa-github"></i
+				></a>
+				<a href="https://github.com/Michaelleojacob" target="_blank">github</a>
+			</div>
+			<div class="foo">
+				<a
+					href="https://www.linkedin.com/in/michael-jacob-a3a90187/"
+					target="_blank"
+					><i class="fab fa-linkedin"></i
+				></a>
+				<a
+					href="https://www.linkedin.com/in/michael-jacob-a3a90187/"
+					target="_blank"
+					>linkedin</a
+				>
+			</div>
+			<div class="foo">
+				<a href="https://github.com/Michaelleojacob/pemdas" target="_blank"
+					><i class="fab fa-github-square"></i
+				></a>
+				<a href="https://github.com/Michaelleojacob/pemdas" target="_blank"
+					>repository</a
+				>
+			</div>
+		</header>
+		<!-- -FLAIR- ends -->
+
+		<!-- APP -->
 		<div id="peopleModule">
 			<h1>People</h1>
-			<input class="personinfo" placeholder="name" type="text" />
-			<button id="addPerson">Add Person</button>
+			<div class="holder">
+				<input class="personinfo" placeholder="name" type="text" />
+				<button id="addPerson">Add Person</button>
+			</div>
 			<ul id="people"></ul>
 		</div>
-		<div class="footer"></div>
+		<!-- APP -->
+
+		<!-- scripts -->
+		<!-- -FLAIR-  -->
+		<script
+			src="https://kit.fontawesome.com/a070dd27e0.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- -FLAIR- -->
+		<script src="./clicktocopy.js"></script>
 		<!-- <script src="./script.js"></script> -->
-		<script src="./main.js"></script>
-		<!-- <script src="./ghostship.js"></script> -->
+		<!-- <script src="./main.js"></script> -->
+		<script src="./ghostship.js"></script>
+		<!-- scirpts end -->
 	</body>
 </html>

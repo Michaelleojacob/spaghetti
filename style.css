@@ -1,22 +1,45 @@
+* {
+	color-scheme: dark;
+}
+
+h1 {
+	margin-top: 10%;
+	display: flex;
+	align-self: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.holder {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.personinfo {
+	border: 1px solid rgba(255, 255, 255, 0.13);
+	box-sizing: border-box;
+}
+
 ul {
 	display: flex;
-	flex-direction: column;
-	list-style-type: none;
+	justify-content: center;
+	align-content: center;
+	align-self: center;
+	flex-flow: column wrap;
 }
 
 li {
 	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-self: center;
 	padding: 2px;
 	margin: 2px;
 	width: 150px;
 	height: fit-content;
 	justify-content: space-between;
 	background: rgb(127, 201, 151);
-}
-
-.footer {
-	margin-top: 50%;
-	height: 100px;
 }
 
 span {
