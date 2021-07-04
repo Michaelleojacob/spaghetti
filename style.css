@@ -8,9 +8,10 @@ li {
 	display: flex;
 	padding: 2px;
 	margin: 2px;
-	width: 200px;
+	width: 150px;
 	height: fit-content;
-	/* background: gray; */
+	justify-content: space-between;
+	background: rgb(127, 201, 151);
 }
 
 .footer {
