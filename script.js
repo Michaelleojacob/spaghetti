@@ -1,10 +1,7 @@
 let people = [];
-const template = document.querySelector("#people-template");
 const addPersonButton = document.querySelector("#addPerson");
 const personinfo = document.querySelector(".personinfo");
 const ulpeople = document.querySelector("#people");
-
-
 
 function makeLiAndSpanDelBtn(pname){
     myperson = document.createElement('li');
